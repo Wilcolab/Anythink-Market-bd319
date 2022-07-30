@@ -10,4 +10,22 @@ When implementing a new feature or fixing a bug, please create a new pull reques
 
 ## First setup
 
-**[TODO 05/01/2018 @vanessa-cooper]:** _It's been a while since anyone ran a fresh copy of this repo. I think it's worth documenting the steps needed to install and run the repo on a new machine?_
+[Install Docker](https://docs.docker.com/get-docker/)
+
+You can verify docker is ready by running the following commands in your terminal:
+
+```
+docker -v
+docker-compose -v
+```
+Then run the following command from this project's root directory to load the backend and frontend.
+
+```
+docker-compose up
+```
+
+If Docker is working correctly, the backend should be running and able to connect to your local database. You can test by browsing to http://localhost:3000/api/ping
+
+You can test the backend by creating a user at http://localhost:3001/register
+
+You can use <code>docker exec</code> to run commands on a running container.
